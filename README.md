@@ -14,6 +14,8 @@
   </a>
 </p>
 
+<hr/>
+
 - [x] Re-designed UI
 - [x] React Router
 - [x] Splide Carousel
