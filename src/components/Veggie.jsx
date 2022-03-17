@@ -8,6 +8,8 @@ function Veggie() {
   const [veggie, setVeggie] = useState([]);
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
+  const API_KEY = process.env.REACT_APP_API_KEY;
+
   useEffect(() => {
     getVeggie();
   }, []);
@@ -19,7 +21,7 @@ function Veggie() {
       setVeggie(JSON.parse(check));
     } else {
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
+        `https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=9&tags=vegetarian`
       );
       const data = await api.json();
       localStorage.setItem("veggie", JSON.stringify(data.recipes));

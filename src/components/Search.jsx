@@ -24,7 +24,7 @@ function Search() {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Search for a dish"
+          placeholder="Search"
         />
       </div>
     </FormStyle>
@@ -46,7 +46,8 @@ const FormStyle = styled.form`
     border: none;
     background: white;
     font-size: 1rem;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 0rem;
+    padding-left: 3rem;
     margin: 0.5rem;
     border: none;
     border-radius: 5px;
