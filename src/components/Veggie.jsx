@@ -46,11 +46,12 @@ function Veggie() {
         <br />
         <Splide
           options={{
-            perPage: windowSize >= 768 ? 3 : 2,
+            perPage: windowSize >= 768 ? 5 : 2,
             arrows: false,
             pagination: false,
+            fixedWidth: "200px",
             drag: "free",
-            gap: "50px",
+            gap: "20px",
           }}
         >
           {veggie.map((recipe) => {
@@ -86,16 +87,13 @@ const Tagline = styled.p`
 `;
 
 const Card = styled.div`
-  height: 20vw;
-  width: 20vw;
+  height: 200px;
+  width: 200px;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  min-width: 200px;
-  min-height: 200px;
 
   img {
-    border-radius: 5px;
     position: absolute;
     left: 0;
     width: 100%;
