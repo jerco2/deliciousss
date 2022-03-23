@@ -48,16 +48,15 @@ const Light = styled.div`
 `;
 
 const SLink = styled(NavLink)`
-  min-width: 150px;
-  min-height: 50px;
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
   align-items: center;
   border-radius: 10px;
   text-decoration: none;
   background: #ffa500;
-  width: 9vw;
-  height: 3vw;
+  width: 100px;
+  height: 100px;
   cusor: pointer;
   transform: scale(0.8);
   color: white;
@@ -68,17 +67,13 @@ const SLink = styled(NavLink)`
     font-size: 16px;
 
     @media (max-width: 768px) {
-      font-size: 1.5vh;
+      font-size: 12px;
     }
   }
 
   svg {
     color: white;
     font-size: 24px;
-
-    @media (max-width: 768px) {
-      font-size: 3vh;
-    }
   }
 
   &.active {
@@ -86,11 +81,8 @@ const SLink = styled(NavLink)`
   }
 
   @media (max-width: 768px) {
-    width: 18vw;
-    height: 18vw;
-    flex-direction: column;
-    min-width: 0;
-    min-height: 0;
+    width: 70px;
+    height: 70px;
   }
 `;
 

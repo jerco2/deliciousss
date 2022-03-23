@@ -28,22 +28,27 @@ function Recipe() {
         <img src={details.image} alt="" />
       </div>
       <Info>
-        <Button
-          className={activeTab === "instructions" ? "active" : ""}
-          onClick={() => setActiveTab("instructions")}
-        >
-          Instructions
-        </Button>
-        <Button
-          className={activeTab === "ingredients" ? "active" : ""}
-          onClick={() => setActiveTab("ingredients")}
-        >
-          Ingredients
-        </Button>
+        <ButtonContainer>
+          <Button
+            className={activeTab === "ingredients" ? "active" : ""}
+            onClick={() => setActiveTab("ingredients")}
+          >
+            Ingredients
+          </Button>
+          <Button
+            className={activeTab === "instructions" ? "active" : ""}
+            onClick={() => setActiveTab("instructions")}
+          >
+            Instructions
+          </Button>
+        </ButtonContainer>
         {activeTab === "instructions" && (
           <div>
-            <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
-            <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
+            <InstructionContainer>
+              <InstructionInfo
+                dangerouslySetInnerHTML={{ __html: details.instructions }}
+              ></InstructionInfo>
+            </InstructionContainer>
           </div>
         )}
 
@@ -65,7 +70,7 @@ const DetailWrapper = styled.div`
   display: flex;
 
   .active {
-    background: linear-gradient(35deg, #494949, #313131);
+    background: #ffa00e;
     color: white;
   }
 
@@ -79,20 +84,49 @@ const DetailWrapper = styled.div`
   }
   ul {
     margin-top: 2rem;
+    padding: 0px 20px;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 2rem;
+
+    img {
+      width: 100%;
+    }
+  }
+`;
+const InstructionInfo = styled.p`
+  font-size: 16px;
+  font-weight: 400px;
+`;
+const InstructionContainer = styled.div`
+  width: 100%;
+  padding: 0 20px;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 20px 0px;
 `;
 
 const Button = styled.button`
-  padding: 1rem 3rem;
-  color: #313131;
+  padding: 10px 30px;
+  color: #ffa00e;
   background: white;
-  border: 2px solid black;
-  margin-right: 2rem;
+  border: 2px solid #ffa00e;
   font-weight: 600;
+  border-radius: 5px;
 `;
 
 const Info = styled.div`
   margin-left: 10rem;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
 `;
 
 export default Recipe;

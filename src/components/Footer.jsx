@@ -93,8 +93,6 @@ const FooterStyled = styled.div`
   width: 100%;
   padding: 2rem;
   display: flex;
-  position: absolute;
-  top: 100%;
   margin-top: 10rem;
 
   @media (max-width: 768px) {

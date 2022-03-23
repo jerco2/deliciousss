@@ -30,15 +30,25 @@ function App() {
 }
 
 const Container = styled.div`
-  margin: 0% 20%;
+  padding: 0% 20%;
+  overflow-y: scroll;
+  height: 100vh;
 
   @media (max-width: 768px) {
-    margin: 5%;
+    padding: 5%;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 `;
 
 const Main = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: column;
 `;
 
 const LogoDiv = styled.div`

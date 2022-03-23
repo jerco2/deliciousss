@@ -49,8 +49,9 @@ function Popular() {
             arrows: false,
             pagination: false,
             fixedWidth: "200px",
+            fixedHeight: "200px",
             drag: "free",
-            gap: "20px",
+            gap: "10px",
           }}
         >
           {popular.map((recipe) => {
@@ -86,9 +87,9 @@ const Tagline = styled.p`
 `;
 
 const Card = styled.div`
-  height: 200px;
-  width: 200px;
-  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
   overflow: hidden;
   position: relative;
 
