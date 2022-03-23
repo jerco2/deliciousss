@@ -4,9 +4,6 @@
 <h4 align=center>This project is a re-designed product of the ReactJS Crash Course from Dev Ed yt channel </h4>
 <p align=center>
   <a>
-    <img src="https://img.shields.io/badge/Status-In%20Early%20Development-red.svg" alt=""/>
-  </a>
-  <a>
     <img src="https://badgen.net/badge/icon/ReactJS?icon=atom&label" alt=""/>
   </a>
   <a>
