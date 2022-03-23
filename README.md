@@ -18,6 +18,6 @@
 
 - [x] Re-designed UI
 - [x] React Router
-- [x] Splide Carousel
+- [x] Splide
 - [x] RESTApi
 - [x] Mobile View
